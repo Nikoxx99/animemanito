@@ -1,0 +1,4 @@
+RewriteEngine On
+Options -Indexes
+
+RewriteRule ^(.*)/(cover|screenshot|banner|episode)/(.*)/(.*).(jpg|png|gif) $1/$2/$4-$3.$5

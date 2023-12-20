@@ -1,0 +1,139 @@
+/*! bootstrap.css */
+.dropdown-menu {
+	background-color: #fff;
+	border-radius: 4px;
+}
+.open>.dropdown-menu {
+	display: block;
+}
+/* form */
+.genres-select {
+	width: 562px;
+}
+.genres-select li {
+	display: inline-block;
+	width: 140px;
+}
+.year-select {
+	width: 502px;
+}
+.year-select li {
+	display: inline-block;
+	width: 100px;
+}
+.filters {
+	margin-bottom: 15px!important;
+}
+.filters .multiselect-native-select {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 5px;
+	margin-bottom: 10px;
+}
+.filters .caret {
+	border: 0;
+	width: auto;
+	height: auto;
+	opacity: 1;
+}
+.filters .caret:before {
+	font-family: "Font Awesome 5 Free";
+	content: '\f078';
+	color: #ee3a27;
+	font-size: 12px;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: -1px;
+	margin-left: 3px;
+	font-weight: 400;
+}
+.filters i {
+	color: #ee3a27;
+	margin-left: 0.2rem;
+}
+.filters .multiselect-container {
+	animation-duration: .3s;
+	animation-fill-mode: both;
+	animation-name: zoomIn;
+	border: 0;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+	padding: 10px;
+	margin-top: 10px!important;
+}
+.filters .genres-select {
+	width: 580px;
+	max-width: 90vw;
+}
+.filters .year-select {
+	width: 350px;
+	max-width: 60vw;
+}
+.filters .multiselect-container.genres-select>li,
+.filters .multiselect-container.year-select>li {
+	float: left;
+	width: 25%;
+}
+.filters .multiselect-container>li>a>label {
+	line-height: 20px;
+	padding: 5px 10px 5px 25px!important;
+	background-color: transparent!important;
+	padding: 3px 20px 3px 30px!important;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 12px;
+}
+.filters .multiselect-container>li>a>label input {
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
+}
+.filters .multiselect-container>li>a>label:before {
+	font-family: "Font Awesome 5 Free";
+	content: '\f0c8';
+	color: rgba(47, 53, 58, .15);
+	font-size: 14px;
+	position: absolute;
+	left: 7px;
+	top: 0;
+	line-height: 30px;
+	transition: .2s;
+}
+.filters .multiselect-container>li>a:hover {
+	color: inherit;
+}
+.filters .multiselect-container>li>a {
+	background-color: transparent!important;
+}
+.filters .multiselect-container>li.active>a,
+.filters .multiselect-container>li.active>a>label:before {
+	color: #ee3a27;
+}
+.filters .multiselect-container>li.active>a>label:before {
+	content: '\f14a';
+}
+.filters .multiselect-container:before {
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid #fff;
+	position: absolute;
+	left: 10px;
+	top: -5px;
+	content: '';
+}
+.filters .multiselect-container>li>a>label.radio:before {
+	content: '\f111';
+}
+.filters .multiselect-container>li.active>a>label.radio:before {
+	content: '\f058';
+}
+.filters>.btn.btn-primary {
+	background-color: #01bcf3;
+	border: 0;
+	font-weight: 700;
+	height: 30px;
+	padding: 0 15px;
+	text-transform: uppercase;
+	font-size: 12px;
+}

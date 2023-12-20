@@ -1,0 +1,16 @@
+<?php $config = array (
+  'domain' => 'fenix.test',
+  'urlpath' => 'http://fenix.test',
+  'cdnpath' => 'http://fenix.test/cdn',
+  'adminpath' => 'http://fenix.test/panel',
+  'site_name' => 'AnimeFénix',
+  'facebook' => 'https://facebook.com/Untaltioyt-105493257589307',
+  'youtube' => '',
+  'media_folder' => 'animes',
+  'theme' => 'animefenix-frans185',
+  'facebook_appid' => '',
+  'facebook_appsecret' => '',
+  'recaptcha_key' => '6LeYoLoUAAAAAEY-eYqZdx-E_o5RiLteytbPQyAI',
+  'recaptcha_secret' => '6LeYoLoUAAAAAB6speu8moBkOTNSxCI-RwtFpemr',
+  'analytics' => 'UA-149261571-1',
+);

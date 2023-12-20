@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Registro - <?php echo $config['site_name']; ?></title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <!--link rel="stylesheet" href="https://unpkg.com/bulma@0.7.5/css/bulma.min.css" /-->
+    <link rel="stylesheet" href="<?php echo getThemeUrl(); ?>/css/bulma.min.css">
+    <link rel="stylesheet" href="<?php echo getThemeUrl(); ?>/css/fontawesome.all.min.css">
+    <style>
+    .has-text-orange {
+        color: #ff7d12!important;
+    }
+    .button.is-orange {
+        background-color: #ff7d12;
+        border-color: transparent;
+        color: #fff;
+    }
+    .button.is-pink{
+        background-color: #e53935;
+        border-color: transparent;
+        color: #fff;
+    }
+    .frans-no-click{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .hero {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+    .hero-body{
+        background: rgba(0,0,0,0.6);
+    }
+    .card-content{
+        background-color: #222;
+    }
+    .g-recaptcha div{
+        display: block;
+        margin: 0 auto;
+    }
+    </style>
+</head>
+
+<body>
+    <section class="hero is-success is-fullheight" style="background-image: url('<?php echo getThemeUrl(); ?>/images/bg-signup.jpg');">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <div class="columns is-centered">
+                    <div class="column is-narrow">
+
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by2">
+                                    <div class="frans-no-click"></div>
+                                    <img src="<?php echo getThemeUrl(); ?>/images/header-sipnup.gif" alt="Sign Up">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+
+                                    <div class="field">
+                                        <p class="control has-icons-left has-icons-right">
+                                            <input class="input" type="text" placeholder="Email" id="email">
+                                            <span class="icon is-small is-left"><i class="fas fa-envelope"></i></span>
+                                            <?php /*<span class="icon is-small is-right"><i class="fas fa-check"></i></span>*/?>
+                                        </p>
+                                    </div>
+                                    <div class="field">
+                                        <p class="control has-icons-left has-icons-right">
+                                            <input class="input" type="text" placeholder="Usuario" id="username">
+                                            <span class="icon is-small is-left"><i class="fas fa-user"></i></span>
+                                            <?php /*<span class="icon is-small is-right"><i class="fas fa-check"></i></span>*/?>
+                                        </p>
+                                    </div>
+                                    <div class="field">
+                                        <p class="control has-icons-left">
+                                            <input class="input" type="password" placeholder="Contraseña" id="password">
+                                            <span class="icon is-small is-left"><i class="fas fa-lock"></i></span>
+                                        </p>
+                                    </div>
+
+                                    <!-- <div class="field">
+                                        <p class="control">
+                                            <div class="g-recaptcha" data-sitekey="6Lcr_egiAAAAAM0LgZoqnUbHyJAH0cBAlanilFO7" data-callback="verifyCaptcha" data-size="normal"></div>
+                                        </p>
+                                    </div> -->
+
+                                    <div class="notification is-danger is-paddingless" id="message">
+                                        
+                                    </div>
+                                    <div class="field">
+                                        <p class="control has-text-centered">
+                                            <button class="button is-pink" id="send_button">Registrarme</button>
+                                        </p>
+                                    </div>
+
+                                    <p class="has-text-grey has-text-weight-semibold">
+                                        <a href="<?php echo $config['urlpath']; ?>/user/login">Iniciar Sesión</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>  
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#send_button').click(function() {
+                var urlpath = '<?php echo $config['urlpath']; ?>';
+                var email = $('#email').val();
+                var username = $('#username').val();
+                var password = $('#password').val();
+
+                var email_validation = email.split(" ").join("");
+                var username_validation = username.split(" ").join("");
+                var password_validation = password.split(" ").join("");
+
+                regex_for_email = /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+
+                // var recaptcha_response = grecaptcha.getResponse();
+                if (username_validation == '' || password_validation == '' || email_validation == '') {
+                    $('#message').html('Ingrese los Datos').slideDown(500);
+                } else if (!regex_for_email.exec(email)) {
+                    $('#message').html('Email no v\u00e1lido').slideDown(500);
+                } else {
+                    $('#message').html('Cargando..').slideDown(500);
+                    $.ajax({
+                        type: 'POST',
+                        url: urlpath + '/user/signup',
+                        data: 'username=' + username + '&password=' + password + '&email=' + email + '&recaptcha=' + true,
+                        dataType: 'json',
+                        success: function(response) {
+                            if (response.error) {
+                                $('#message').html(response.error).slideDown(500);
+                                // grecaptcha.reset();
+                            } else {
+                                location.href = urlpath;
+                            }
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

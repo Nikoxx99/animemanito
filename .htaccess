@@ -1,0 +1,25 @@
+RewriteEngine On
+
+RewriteRule ^user/login$ user-login.php [QSA,L]
+RewriteRule ^user/signup$ user-signup.php [QSA,L]
+RewriteRule ^user/logout$ user-logout.php [QSA,L]
+RewriteRule ^user/forgot-password$ user-forgot-password.php [QSA,L]
+RewriteRule ^user/password-reset$ user-password-reset.php [QSA,L]
+
+
+RewriteRule ^zerotwo$ zerotwo.php [QSA,L]
+RewriteRule ^animes$ series.php [QSA,L]
+RewriteRule ^calendario$ calendar.php [QSA,L]
+
+RewriteRule ^ver/(.*)-([0-9_-_.]+)$ episode.php?serie_url=$1&episode_number=$2 [QSA,L]
+RewriteRule ^ver/(.*)-([0-9_-_.]+)/descarga$ episode_download.php?serie_url=$1&episode_number=$2 [QSA,L]
+
+RewriteRule ^perfil/([0-9]+)/(.*)$ user-profile.php?user_id=$1&user_name=$2 [QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([a-z-0-9_-]+)$ serie.php?url=$1 [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([a-z-0-9_-_/]+)/$ page-custom.php?url=$1 [L,QSA]

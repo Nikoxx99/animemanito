@@ -1,0 +1,24 @@
+<section id="last-view-container" class="col-12 col-sm-12 col-md-9 col-lg-9" style="padding-top:30px;">
+            <h4 class="has-text-orange" style="padding-left:10px;">Últimos Capitulos que has visto <?php echo $session['name'];?></h4>
+            <div class="capitulos-grid" id="capitulos-grid"> 
+                <?php foreach ($user['last-view'] as $episode) { ?>
+                    <div class="item">
+                        <div class="overarchingdiv">
+                            <a href="<?php echo $config['urlpath'] . '/ver/' . $episode['url'] . '-' . $episode['number']; ?>" title="<?php echo htmlspecialchars($episode['name'] . ' ' . $episode['number']); ?>">
+                                <img src="<?php echo getEpisodeImage($episode['image_screenshot'], $episode['image']); ?>" alt="<?php echo htmlspecialchars($episode['name'] . ' ' . $episode['number']); ?>">
+                                <div class="hoveroverlay"> <i class="fa fa-play pgnav activehov"></i> </div>
+                                <div class="seriesoverlay has-text-orange">
+                                    <h3 class="has-text-centered">
+                                        <div class="overtitle has-text-weight-semibold"><?php echo $episode['name']; ?></div>
+                                        <div class="overepisode has-text-weight-semibold is-size-7">EP<?php echo $episode['number']; ?></div>
+                                    </h3>
+                                    <?php /*<div class="recentupd">Hace 4 horas</div>*/ ?>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                <?php } ?>
+                
+            </div>
+            <?php echo $per_page_html; ?>
+        </section>

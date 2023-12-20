@@ -1,0 +1,28 @@
+RewriteEngine On
+Options -Indexes
+
+RewriteRule ^serie/list$ serie-list.php [QSA,L]
+RewriteRule ^serie/create$ serie-create.php [QSA,L]
+RewriteRule ^serie/airing$ serie-airing.php [QSA,L]
+RewriteRule ^serie/latest-episodes$ serie-latest-episodes.php [QSA,L]
+
+RewriteRule ^serie/([0-9_-]+)/edit$ serie-edit.php?serie_id=$1 [QSA,L]
+RewriteRule ^serie/([0-9_-]+)/episodes$ serie-episode-list.php?serie_id=$1 [QSA,L]
+RewriteRule ^serie/([0-9_-]+)/episode/create$ serie-episode-create.php?serie_id=$1 [QSA,L]
+RewriteRule ^serie/([0-9_-]+)/episode/([0-9_-]+)/edit$ serie-episode-edit.php?serie_id=$1&episode_id=$2 [QSA,L]
+
+
+RewriteRule ^user/list$ user-list.php [QSA,L]
+RewriteRule ^user/([0-9_-]+)/change-password$ user-change-password.php?user_id=$1 [QSA,L]
+RewriteRule ^user/([0-9_-]+)/edit$ user-edit.php?user_id=$1 [QSA,L]
+
+RewriteRule ^genre/list$ genre-list.php [QSA,L]
+RewriteRule ^genre/create$ genre-create.php [QSA,L]
+RewriteRule ^genre/([0-9_-]+)/edit$ genre-edit.php?player_id=$1 [QSA,L]
+
+RewriteRule ^player/list$ player-list.php [QSA,L]
+RewriteRule ^player/create$ player-create.php [QSA,L]
+RewriteRule ^player/([0-9_-]+)/edit$ player-edit.php?player_id=$1 [QSA,L]
+
+RewriteRule ^setting/common$ setting-common.php [QSA,L]
+RewriteRule ^setting/slider$ setting-slider.php [QSA,L]

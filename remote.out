@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <title>Down for Maintenance</title><style>
+            @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap');
+            html, body
+            {
+                margin:	0;
+                padding: 0;
+                font-family: "Lucida Grande", Helvetica, Arial, "Arial Unicode", sans-serif;
+                font-size: 20px;
+                background: #1b2332;
+                color: #fff;
+                height:	100%;
+            }
+
+            .maintenanceContent
+            {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                position: absolute;
+                top: 50%;
+                height: 180px;
+                margin-top: -90px;
+                font-family: 'Quicksand',sans-serif;
+            }
+            h1
+            {
+                color: #ffffff;
+                /*font-size: 42px;
+                font-weight: 500;*/
+            }
+        </style>
+    </head>
+    <body>
+        <div class="maintenanceContent">
+        <img src="https://www.fireload.com/themes/flow/ree/img/flame-blue.png" width="100" alt="Fireload" title="Fireload">
+            <h1>We'll be back soon.</h1>           
+            We are currently down for maintenance. Please try again later.<br>
+            We are currently expanding our infrastructure for a better cloud storage service.<br>
+            Thanks for your patience.
+            <p style="display: none">
+		        <span id="days"></span> days / <span id="hours"></span> hours / <span id="minutes"></span> minutes / <span id="seconds"></span> seconds
+		    </p>
+		        </div>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142801596-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-142801596-1');
+    </script>
+    <script>
+    //===
+	// VARIABLES
+	//===
+	const DATE_TARGET = new Date('07/23/2020 12:01 PM');
+	// DOM for render
+	const SPAN_DAYS = document.querySelector('span#days');
+	const SPAN_HOURS = document.querySelector('span#hours');
+	const SPAN_MINUTES = document.querySelector('span#minutes');
+	const SPAN_SECONDS = document.querySelector('span#seconds');
+	// Milliseconds for the calculations
+	const MILLISECONDS_OF_A_SECOND = 1000;
+	const MILLISECONDS_OF_A_MINUTE = MILLISECONDS_OF_A_SECOND * 60;
+	const MILLISECONDS_OF_A_HOUR = MILLISECONDS_OF_A_MINUTE * 60;
+	const MILLISECONDS_OF_A_DAY = MILLISECONDS_OF_A_HOUR * 24
+
+	//===
+	// FUNCTIONS
+	//===
+
+	/**
+	 * Method that updates the countdown and the sample
+	 */
+	function updateCountdown() {
+	    // Calcs
+	    //const NOW = new Date("July 23, 2020 00:01:00");
+	    const NOW = new Date(
+		    2022,5,17,15,25,52);
+	    //console.log(NOW);
+	    const DURATION = DATE_TARGET - NOW;
+	    const REMAINING_DAYS = Math.floor(DURATION / MILLISECONDS_OF_A_DAY);
+	    const REMAINING_HOURS = Math.floor((DURATION % MILLISECONDS_OF_A_DAY) / MILLISECONDS_OF_A_HOUR);
+	    const REMAINING_MINUTES = Math.floor((DURATION % MILLISECONDS_OF_A_HOUR) / MILLISECONDS_OF_A_MINUTE);
+	    const REMAINING_SECONDS = Math.floor((DURATION % MILLISECONDS_OF_A_MINUTE) / MILLISECONDS_OF_A_SECOND);
+	    // Thanks Pablo Monteserín (https://pablomonteserin.com/cuenta-regresiva/)
+
+	    // Render
+	    SPAN_DAYS.textContent = REMAINING_DAYS;
+	    SPAN_HOURS.textContent = REMAINING_HOURS;
+	    SPAN_MINUTES.textContent = REMAINING_MINUTES;
+	    SPAN_SECONDS.textContent = REMAINING_SECONDS;
+	}
+
+	//===
+	// INIT
+	//===
+	updateCountdown();
+	// Refresh every second
+	setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
+    </script>
+    </body>
+</html>
