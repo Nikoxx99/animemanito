@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set('UTC');
 $env = getenv('ENV');
-echo 'uwu' . $_ENV['ENV'];
+print_r($_ENV);
 die();
 $host = ($env === 'DEV' ? 'animemanito.test' : 'animemanito.tv');
 function getSiteDomain()
