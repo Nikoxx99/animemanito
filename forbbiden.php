@@ -55,10 +55,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     <link rel="stylesheet" href="<?php echo getThemeUrl(); ?>/css/fontawesome.all.min.css">
     <style>
     .has-text-orange {
-        color: #ff7d12!important;
+        color: #E2C205!important;
     }
     .button.is-orange {
-        background-color: #ff7d12;
+        background-color: #E2C205;
         border-color: transparent;
         color: #fff;
     }
@@ -103,8 +103,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
                         </div>
                         <div class="card-content">
                             <div class="content">
-                                <h2 class="has-text-white">AnimeFenix is not available in your country</h2><br>
-                                <h3 class="has-text-white">AnimeFenix no se encuentra disponible en tu pais.</h3><br>
+                                <h2 class="has-text-white">animemanito is not available in your country</h2><br>
+                                <h3 class="has-text-white">animemanito no se encuentra disponible en tu pais.</h3><br>
                                 <h3 class="has-text-white">あなたの国では利用できません</h3><br>
                                 <h3 class="has-text-white">在您所在的国家/地区不可用</h3><br>
                                 <br><br>

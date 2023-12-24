@@ -53,7 +53,7 @@
     .overtitle {
         padding: 0px 0px;
         margin-top:8px;
-        color: #ff7d12;
+        color: #E2C205;
         font-size: 16px;
         line-height: 30px;
         bottom: 0px;
@@ -80,7 +80,7 @@
         overflow: hidden;
         border-radius:1.5rem;
         transform: translate(2px, -2px);
-        box-shadow: #ff7d12 -2px 2px 0px 1px;
+        box-shadow: #E2C205 -2px 2px 0px 1px;
         transition: all  0.2s;
     }
     .overarchingdivrecent img {
@@ -116,7 +116,7 @@
         overflow: hidden;
         border-radius:1.5rem;
         transform: translate(2px, -2px);
-        box-shadow: #ff7d12 -2px 2px 0px 1px;
+        box-shadow: #E2C205 -2px 2px 0px 1px;
         transition: all  0.2s;
     }
     .overarchingdivnoti img {
@@ -151,7 +151,7 @@
         overflow: hidden;
         border-radius:1.5rem;
         transform: translate(2px, -2px);
-        box-shadow: #ff7d12 -2px 2px 0px 1px;
+        box-shadow: #E2C205 -2px 2px 0px 1px;
         transition: all  0.2s;
     }
     .overarchingdiv img {
@@ -240,7 +240,7 @@
         .overtitle {
             padding: 0px 0px;
             margin-top:18px!important;
-            color: #ff7d12;
+            color: #E2C205;
             font-size: 16px;
             line-height: 30px;
             bottom: 0px;
@@ -420,7 +420,7 @@
     .overtitle {
         padding: 0px 0px;
         margin-top:8px;
-        color: #ff7d12;
+        color: #E2C205;
         font-size: 16px;
         line-height: 30px;
         bottom: 0px;
@@ -521,7 +521,7 @@
     }
     .popular:hover {
         transition: all  0.2s;
-        color: #ff7d12!important;
+        color: #E2C205!important;
     }
 </style>
 <?php $data['header_css'] = endZone(); ?>
@@ -535,7 +535,7 @@
     <section class="page-home__slider-container">
         <div class="container rounded-container">
             <h1 class="title is-size-5 has-text-weight-semibold has-text-grey-light" style="margin-bottom:0;padding-top:10px;padding-bottom:10px;padding-left:15px;">
-                <i class="fa fa-fire has-text-orange"></i> Animes Populares
+                <i class="fa fa-fire has-text-orange"></i> Popular
             </h1>
 
             <div class="owl-carousel home-slider" style="padding-left:10px;padding-right:10px;">
@@ -578,7 +578,7 @@
 
         </div>
     </section>
-    <section class="page-home__latest-chapters">
+   <!-- <section class="page-home__latest-chapters">
         <div class="container rounded-container">
             <h1 class="title is-size-5 has-text-weight-semibold has-text-grey-light" style="margin-bottom:0;padding-top:10px;padding-left:15px;">
                 <i class="fa fa-newspaper has-text-orange"></i> Noticias Anime
@@ -601,7 +601,7 @@
                 <?php } ?>
             </div>
         </div>
-    </section>
+    </section> -->
     <section class="container">
         <?php include 'ads/bidgear.php';?>
     </section>
@@ -609,7 +609,7 @@
     <section class="page-home__latest-chapters">
         <div class="container">
             <h1 class="title is-size-5 has-text-weight-semibold has-text-grey-light" style="margin-bottom:0;padding-top:10px;padding-left:15px;">
-                <i class="fa fa-play has-text-orange"></i> Visto recientemente
+                <i class="fa fa-play has-text-orange"></i> Visualizado recentemente
             </h1>
                 <div class="column is-full">
                     <div class="recientes-grid">
@@ -631,15 +631,10 @@
         </div>
     </section>
     <?php } ?>
-    <div class="container" style="display:flex;justify-content:center;">
-        <a href="https://hentaini.com/">
-            <img style="max-width:100%;height:auto;" src="hni3.jpg" alt="Watch English sub Hentai">
-        </a>
-    </div>
     <section class="page-home__latest-chapters">
         <div class="container">
             <h1 class="title is-size-5 has-text-weight-semibold has-text-grey-light" style="margin-bottom:0;padding-top:10px;padding-left:15px;">
-                <i class="fa fa-play has-text-orange"></i> Episodios recientes
+                <i class="fa fa-play has-text-orange"></i> Capítulos recentes
             </h1>
                 <div class="column is-full" style="padding:0;">
                     <div class="capitulos-grid">
@@ -663,8 +658,8 @@
 
     <section class="page-home__latest-series">
         <div class="container rounded-container">
-            <h1 class="title is-size-5 has-text-weight-semibold has-text-grey-light" style="margin-bottom:0;padding-top:10px;padding-left:15px;">
-                <i class="fa fa-star has-text-orange"></i> Últimas series agregadas
+            <h1 class="title is-size-5 has-text-weight-semibold has-text-grey-light" style="margin-bottom:0;padding-top:10px;padding-left:10px;">
+                <i class="fa fa-star has-text-orange"></i> Última série adicionada
             </h1>
 
             <div class="list-series">
@@ -716,15 +711,15 @@
 
     <section class="section has-background-darkx">
         <div class="container">
-            <h1 class="title is-size-5 has-text-weight-semibold has-text-grey-light" style="margin-bottom:0;padding-bottom:10px;padding-left:15px;">
-                <i class="fas fa-comment-dots far has-text-orange"></i> Comentarios:
+            <h1 class="title is-size-5 has-text-weight-semibold has-text-grey-light" style="margin-bottom:0;padding-bottom:10px;padding-left:10px;">
+                <i class="fas fa-comment-dots far has-text-orange"></i> Comentários:
             </h1>
             <!-- <div style="display:grid;place-items:center">
                 <p style="color:white;">Al que spameo el comentario con 200 anidaciones: Felicidades, tu madre estará orgullosa.</p>
-                <img src="https://www.animefenix.com/pvtoelquelolea.jpg" alt="Ve y dile al vato que publico el comentario que lo borre :v" width="50%">
+                <img src="https://www.animemanito.com/pvtoelquelolea.jpg" alt="Ve y dile al vato que publico el comentario que lo borre :v" width="50%">
             </div> -->
             <div id="commentsContainer">
-                <div id="showComments" class="button is-fullwidth is-orange">Mostrar Comentarios</div>
+                <div id="showComments" class="button is-fullwidth is-orange">Mostrar comentários</div>
             </div>
             <script>
                 /**
@@ -733,7 +728,7 @@
                 /*
                 var disqus_config = function () {
                   // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = 'animefenix'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                this.page.identifier = 'animemanito'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                 };
                 */
             </script>
@@ -747,7 +742,7 @@
         <div class="modal-content" style="background-color:#222;">
         <div class="box has-text-white" style="background-color:#222;">
             <h1 class="title has-text-white has-text-centered has-text-bold">¡Disponible Calendario Otoño!</h1>
-            <img src="https://animefenix.tv/themes/animefenix-frans185/images/fall.png" alt="Placeholder Image" class="mb-2">
+            <img src="https://animemanito.tv/themes/animemanito-frans185/images/fall.png" alt="Placeholder Image" class="mb-2">
             <button class="button is-secondary close-modal">Cerrar</button>
         </div>
         </div>
@@ -757,7 +752,7 @@
         <div class="modal-content" style="background-color:#222;">
         <div class="box has-text-white" style="background-color:#222;">
             <h1 class="title has-text-white has-text-centered has-text-bold">¡Una al día no hace daño!</h1>
-            <img src="https://animefenix.tv/themes/animefenix-frans185/images/unaldia.jpg" alt="Placeholder Image" class="mb-2">
+            <img src="https://animemanito.tv/themes/animemanito-frans185/images/unaldia.jpg" alt="Placeholder Image" class="mb-2">
             <button class="button is-secondary close-modal">Cerrar</button>
         </div>
         </div>
@@ -786,13 +781,13 @@
 $("#showComments").click(function() {
     $("#commentsContainer").append('<div id="disqus_thread"></div>');
     var disqus_config = function () {
-    this.page.url = 'https://www.animefenix.tv/';
-    this.page.identifier = 'animefenix.tv'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    this.page.url = 'https://www.animemanito.tv/';
+    this.page.identifier = 'animemanito.tv'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
         var d = document,
             s = d.createElement('script');
-        s.src = 'https://animefenix.disqus.com/embed.js';
+        s.src = 'https://animemanito.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();

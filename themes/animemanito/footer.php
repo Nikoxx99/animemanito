@@ -3,11 +3,10 @@
             <div class="container" style="display:flex;justify-content:center;">
                 <span style="display:block;text-align:center;">
                     <p class="subtitle is-marginless is-size-6">
-                        Ningun vídeo se encuentra alojado en nuestros servidores.
+                        Nenhum vídeo está hospedado em nossos servidores.
                     </p>
                     <p class="subtitle is-marginless is-size-7">
-                        Desarrollado por <b class="has-text-grey">frans185</b>
-                        Modificado y adaptado por <b class="has-text-grey">Niko_</b>
+                        Desarrollado por <b class="has-text-grey">UwU</b>
                     </p>
                 </span>
             </div>

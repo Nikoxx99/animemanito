@@ -152,11 +152,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		// 	$texto_sub = $data['text_notification'];
 		// 	function sendMessage($nombre_link1, $texto_sub, $img, $badge)
 		// 	{
-		// 		$titulo_noti = $nombre_link1 . " | AnimeFenix";
+		// 		$titulo_noti = $nombre_link1 . " | animemanito";
 		// 		$message      = array(
 		// 			'title' => $titulo_noti,
 		// 			'text' => $texto_sub,
-		// 			'url' => 'https://www.animefenix.com/',
+		// 			'url' => 'https://www.animemanito.com/',
 		// 			'image' => $img,
 		// 			'icon' => $badge
 		// 		);

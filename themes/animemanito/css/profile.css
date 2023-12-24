@@ -1,28 +1,28 @@
-.fenix-ul-background li.active{
+.manito-ul-background li.active{
     background-color:#111 !important;
     padding: 5px 3px 5px 3px;
 }
-.fenix-ul-background li i{
+.manito-ul-background li i{
     padding-right:0.4rem;
 }
-.fenix-ul-background li.active i{
+.manito-ul-background li.active i{
     color:#bb5b0d;
     padding-right:0.4rem;
 }
-.fenix-ul-background li{
+.manito-ul-background li{
     background-color:#333 !important;
     padding: 5px 3px 5px 3px;
 }
-.fenix-ul-background :not(:last-of-type){
+.manito-ul-background :not(:last-of-type){
     background-color:#333 !important;
     padding: 5px 3px 5px 3px;
     border-bottom: #222 1px solid;
 }
 
-.fenix-userinfo-container{
+.manito-userinfo-container{
     background-color:#333 !important;
 }
-.fenix-userinfo-container img {
+.manito-userinfo-container img {
     border-radius: 50% !important;
     width:100%;
     height:auto;

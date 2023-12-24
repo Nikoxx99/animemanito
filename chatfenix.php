@@ -1,6 +1,6 @@
 <?php
 echo "
-<p>Chat Fenix</p>
+<p>Chat manito</p>
 
 <button onclick='myFunction()'>Ingresar</button>
 

@@ -77,7 +77,7 @@ html{
     }
 
     .episode-page__servers.is-toggle ul {
-        border-bottom: 2px solid #ff7d12;
+        border-bottom: 2px solid #E2C205;
     }
 
     .episode-page__servers.is-toggle a {
@@ -91,7 +91,7 @@ html{
     }
 
     .episode-page__servers.is-toggle li.is-active a {
-        background-color: #ff7d12;
+        background-color: #E2C205;
         border-radius: 0;
     }
 
@@ -138,21 +138,21 @@ html{
 
             <?php if (isset($data['episode_prev'])) { ?>
                 <div class="column is-3-desktop is-2-tablet is-2-mobile" style="display: flex;justify-content: start;z-index:100;">
-                    <a href="<?php echo $config['urlpath'] . '/ver/' . $data['serie']['url'] . '-' . $data['episode_prev']; ?>/descarga" class="button is-rounded is-orange is-fullwidth" style="font-size:0.9rem!important;">
+                    <a href="<?php echo $config['urlpath'] . '/ver/' . $data['serie']['url'] . '-' . $data['episode_prev']; ?>/descarga" class="button  is-orange is-fullwidth" style="font-size:0.9rem!important;">
                         <i class="fa fa-arrow-circle-left"></i>&nbsp;
                     </a>
                 </div>
             <?php } ?>
 
             <div class="column is-6-desktop is-8-tablet is-8-mobile">
-                <a href="<?php echo $config['urlpath'] . '/' . $data['serie']['url']; ?>" class="button is-rounded is-dark" style="font-size:0.9rem!important;display: flex;justify-content: center;">
+                <a href="<?php echo $config['urlpath'] . '/' . $data['serie']['url']; ?>" class="button  is-dark" style="font-size:0.9rem!important;display: flex;justify-content: center;">
                     <i class="fa fa-list-alt"></i>&nbsp;Episodios
                 </a>
             </div>
 
             <?php if (isset($data['episode_next'])) { ?>
                 <div class="column is-3-desktop is-2-tablet is-2-mobile" style="display: flex;justify-content: end;">
-                    <a href="<?php echo $config['urlpath'] . '/ver/' . $data['serie']['url'] . '-' . $data['episode_next']; ?>/descarga" class="button is-rounded is-orange is-fullwidth" style="font-size:0.9rem!important;">
+                    <a href="<?php echo $config['urlpath'] . '/ver/' . $data['serie']['url'] . '-' . $data['episode_next']; ?>/descarga" class="button  is-orange is-fullwidth" style="font-size:0.9rem!important;">
                         <i class="fa fa-arrow-circle-right"></i>&nbsp;
                     </a>
                 </div>
@@ -177,8 +177,8 @@ html{
             <p>NOTA</p>
         </div>
         <div class="message-body">
-            Recuerda que debes crear una cuenta para poder descargar. <a href="https://www.animefenix.com/user/signup">Click aqui para crear una cuenta</a> <br>
-            Si ya tienes una cuenta <a href="https://www.animefenix.com/user/login">Haz click aqui para ingresar</a>
+            Recuerda que debes crear una cuenta para poder descargar. <a href="https://www.animemanito.com/user/signup">Click aqui para crear una cuenta</a> <br>
+            Si ya tienes una cuenta <a href="https://www.animemanito.com/user/login">Haz click aqui para ingresar</a>
         </div>
     </article>
     <article class="message is-dark">

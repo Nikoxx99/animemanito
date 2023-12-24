@@ -20,12 +20,12 @@ $data['categories'] = DB::query('SELECT * FROM category ORDER BY id ASC');
 $data['status'] = DB::query('SELECT * FROM status ORDER BY id ASC');
 
 $data['order-list'] = array();
-$data['order-list'][] = ['url' => 'default', 'name' => 'Por Defecto'];
-$data['order-list'][] = ['url' => 'updated', 'name' => 'Recientemente Actualizados'];
-$data['order-list'][] = ['url' => 'added', 'name' => 'Recientemente Agregados'];
-$data['order-list'][] = ['url' => 'title', 'name' => 'Nombre A-Z'];
-$data['order-list'][] = ['url' => 'likes', 'name' => 'Calificación'];
-$data['order-list'][] = ['url' => 'visits', 'name' => 'Más Vistos'];
+$data['order-list'][] = ['url' => 'default', 'name' => 'Padrão'];
+$data['order-list'][] = ['url' => 'updated', 'name' => 'Recentemente atualizados'];
+$data['order-list'][] = ['url' => 'added', 'name' => 'Recentemente agregados'];
+$data['order-list'][] = ['url' => 'title', 'name' => 'Nome A-Z'];
+$data['order-list'][] = ['url' => 'likes', 'name' => 'Classificação'];
+$data['order-list'][] = ['url' => 'visits', 'name' => 'Mais Vistos'];
 
 for($i=date('Y'); $i>=1990; $i--)
 {

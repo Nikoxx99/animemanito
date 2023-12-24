@@ -1,27 +1,27 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald:700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:700");
 /* COLOR HELPERS */
 .has-text-orange {
-    color: #ff7d12!important;;
+    color: #E2C205!important;;
 }
 
 .button.is-orange {
-    background-color: #ff7d12;
+    background-color: #E2C205;
     border-color: transparent;
     color: #fff;
 }
 .button.is-orange.is-outlined {
     background-color: transparent;
-    border-color: #ff7d12;
-    color: #ff7d12;
+    border-color: #E2C205;
+    color: #E2C205;
 }
 
 .tag:not(body).is-orange {
-    background-color: #ff7d12;
+    background-color: #E2C205;
     color: #fff;
 }
 
 .input.is-orange, .textarea.is-orange {
-    border-color: #ff7d12;
+    border-color: #E2C205;
 }
 
 /* TOOLS */
@@ -88,7 +88,7 @@ body{
     background-color: #111;
     color: #fff;
     outline: none;
-    border-color: #ff7d13;
+    border-color: #E2C205;
 }
 
 
@@ -103,8 +103,8 @@ body{
 
 /* PAGINATION */
 .pagination-link.is-current {
-    background-color: #ff7d12;
-    border-color: #ff7d12;
+    background-color: #E2C205;
+    border-color: #E2C205;
     color: #fff;
 }
 
@@ -283,7 +283,7 @@ body{
     padding-top: 0;
     padding-bottom: 0;
 }
-body,button,input,select,textarea{font-family:"Oswald",-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif}
-.is-family-primary{font-family:"Oswald",-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif!important}
-.is-family-secondary{font-family:"Oswald",-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif!important}
-.is-family-sans-serif{font-family:"Oswald",-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif!important}
+body,button,input,select,textarea{font-family:"Roboto",-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif}
+.is-family-primary{font-family:"Roboto",-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif!important}
+.is-family-secondary{font-family:"Roboto",-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif!important}
+.is-family-sans-serif{font-family:"Roboto",-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif!important}

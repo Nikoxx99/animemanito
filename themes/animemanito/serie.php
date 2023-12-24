@@ -81,7 +81,7 @@ date_default_timezone_set('America/Bogota');
     }
 
     .anime-page__episode-list>li>a:hover {
-        background-color: #ff7d12;
+        background-color: #E2C205;
         color: #fff;
     }
 
@@ -121,7 +121,7 @@ date_default_timezone_set('America/Bogota');
         <div class="container">
             <div class="columns is-mobile is-multiline">
                 <div class="column is-12-mobile xis-3-tablet xis-3-desktop xhas-background-danger is-narrow-tablet is-narrow-desktop">
-                    <figure class="image is-2by4" style="    border: 3px solid #ff7d12;border-radius: 10px;">
+                    <figure class="image is-2by4" style="    border: 3px solid #E2C205;border-radius: 10px;">
                         <img src="<?php echo getSerieCover($data['serie']['image_cover']); ?>" alt="<?php echo htmlspecialchars($data['serie']['name']); ?>" style="border-radius: 10px;" />
                     </figure>
                     <br>
@@ -158,7 +158,7 @@ date_default_timezone_set('America/Bogota');
                     }
 
                     .points-container {
-                        border-bottom: 1px solid #ff7d12;
+                        border-bottom: 1px solid #E2C205;
                     }
                 </style>
                 <div class="column">
@@ -218,7 +218,7 @@ date_default_timezone_set('America/Bogota');
                     <h6 class="has-text-weight-semibold is-uppercase has-text-grey has-border-bottom">Géneros</h6>
                     <p class="genres buttons">
                         <?php foreach ($data['serie']['genres'] as $genre) { ?>
-                            <a href="<?php echo $config['urlpath'] . '/animes?genero[]=' . $genre['url']; ?>" class="button is-small is-orange is-outlined is-roundedX"><?php echo $genre['name']; ?></a>
+                            <a href="<?php echo $config['urlpath'] . '/animes?genero[]=' . $genre['url']; ?>" class="button is-small is-orange is-outlined X"><?php echo $genre['name']; ?></a>
                         <?php } ?>
                     </p>
 
@@ -318,7 +318,7 @@ date_default_timezone_set('America/Bogota');
                             // }
                         ?>
                             <li>
-                                <a class="fa-play-circle d-inline-flex align-items-center is-rounded <?php if(isset($seen_class)){echo $seen_class;}else{echo "";} ?>" href="<?php echo $config['urlpath'] . '/ver/' . $data['serie']['url'] . '-' . $episode['number']; ?>"><?php echo $data['serie']['name']; ?> <span>Episodio <?php if(isset($episode['episodegroup'])) {echo $episode['episodegroup'];} else { echo $episode['number'];} ?></span></a>
+                                <a class="fa-play-circle d-inline-flex align-items-center  <?php if(isset($seen_class)){echo $seen_class;}else{echo "";} ?>" href="<?php echo $config['urlpath'] . '/ver/' . $data['serie']['url'] . '-' . $episode['number']; ?>"><?php echo $data['serie']['name']; ?> <span>Episodio <?php if(isset($episode['episodegroup'])) {echo $episode['episodegroup'];} else { echo $episode['number'];} ?></span></a>
                             </li>
                         <?php } ?>
                     </ul>
@@ -365,13 +365,13 @@ date_default_timezone_set('America/Bogota');
                         /*
                         var disqus_config = function () {
                         this.page.url = '<?php echo $config['current_url']; ?>';  // Replace PAGE_URL with your page's canonical URL variable
-                        this.page.identifier = 'animefenix'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        this.page.identifier = 'animemanito'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                         };
                         */
                         (function() { // DON'T EDIT BELOW THIS LINE
                             var d = document,
                                 s = d.createElement('script');
-                            s.src = 'https://animefenix.disqus.com/embed.js';
+                            s.src = 'https://animemanito.disqus.com/embed.js';
                             s.setAttribute('data-timestamp', +new Date());
                             (d.head || d.body).appendChild(s);
                         })();

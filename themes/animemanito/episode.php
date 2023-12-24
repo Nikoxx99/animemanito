@@ -85,7 +85,7 @@ function getThemeDownloadDomain($url)
     }
 
     .episode-page__servers.is-toggle li.is-active a {
-        background-color: #ff7d12;
+        background-color: #E2C205;
         border-radius: 0;
     }
 
@@ -167,21 +167,21 @@ function getThemeDownloadDomain($url)
 
                         <?php if (isset($data['episode_prev'])) { ?>
                             <div class="column is-3-desktop is-2-tablet is-2-mobile" style="display: flex;justify-content: start;z-index:10;">
-                                <a href="<?php echo $config['urlpath'] . '/ver/' . $data['serie']['url'] . '-' . $data['episode_prev']; ?>" class="button is-rounded is-orange is-fullwidth" style="font-size:0.9rem!important;">
+                                <a href="<?php echo $config['urlpath'] . '/ver/' . $data['serie']['url'] . '-' . $data['episode_prev']; ?>" class="button  is-orange is-fullwidth" style="font-size:0.9rem!important;">
                                     <i class="fa fa-arrow-circle-left"></i>&nbsp;
                                 </a>
                             </div>
                         <?php } ?>
 
                         <div class="column is-6-desktop is-8-tablet is-8-mobile">
-                            <a href="<?php echo $config['urlpath'] . '/' . $data['serie']['url']; ?>" class="button is-rounded is-dark" style="font-size:0.9rem!important;display: flex;justify-content: center;">
+                            <a href="<?php echo $config['urlpath'] . '/' . $data['serie']['url']; ?>" class="button  is-dark" style="font-size:0.9rem!important;display: flex;justify-content: center;">
                                 <i class="fa fa-list-alt"></i>&nbsp;Episodios
                             </a>
                         </div>
 
                         <?php if (isset($data['episode_next'])) { ?>
                             <div class="column is-3-desktop is-2-tablet is-2-mobile" style="display: flex;justify-content: end;">
-                                <a href="<?php echo $config['urlpath'] . '/ver/' . $data['serie']['url'] . '-' . $data['episode_next']; ?>" class="button is-rounded is-orange is-fullwidth" style="font-size:0.9rem!important;">
+                                <a href="<?php echo $config['urlpath'] . '/ver/' . $data['serie']['url'] . '-' . $data['episode_next']; ?>" class="button  is-orange is-fullwidth" style="font-size:0.9rem!important;">
                                     <i class="fa fa-arrow-circle-right"></i>&nbsp;
                                 </a>
                             </div>
@@ -259,18 +259,18 @@ function getThemeDownloadDomain($url)
                             </div>
                             </div> -->
                             <div class="column is-narrow" style="padding-top:0!important;">
-                                <a href="<?php echo $config['current_url']; ?>/descarga" class="button is-rounded is-dark">
+                                <a href="<?php echo $config['current_url']; ?>/descarga" class="button  is-dark">
                                     <i class="fa fa-cloud-download-alt"></i>
                                 </a>
                                 <?php if (isset($session['name'])) { ?>
-                                    <button id="toggleFav" class="button is-rounded is-dark <?php echo $favActive; ?>">
+                                    <button id="toggleFav" class="button  is-dark <?php echo $favActive; ?>">
                                         <i style="font-size:1.2rem;margin-right:0!important;" class="fas fa-heart"></i>
                                     </button>
-                                    <button id="toggleVl" class="button is-rounded is-dark <?php echo $colorVerLuego; ?>">
+                                    <button id="toggleVl" class="button  is-dark <?php echo $colorVerLuego; ?>">
                                         <i style="font-size:1.2rem;margin-right:0!important;" id="icon_wl" class="<?php echo $icon; ?>"></i>
                                     </button>
                                 <?php } ?>
-                                <a href="https://app.laniakea.live/" class="button is-rounded is-orange showModal"><i style="font-size:1rem;margin-right:5px!important;" class="fas fa-user"></i> Ver con amigos</a>
+                                <a href="https://app.laniakea.live/" class="button  is-orange showModal"><i style="font-size:1rem;margin-right:5px!important;" class="fas fa-user"></i> Ver con amigos</a>
                                 <!-- <div class="modal">
                                     <div class="modal-background"></div>
                                     <div class="modal-card">
@@ -287,7 +287,7 @@ function getThemeDownloadDomain($url)
                                                 </p>
                                                 <strong><h2>Aqui entra Laniakea</h2></strong>
                                                 <p>
-                                                    Laniakea es una plataforma creada por el equipo de AnimeFenix para de forma sencilla, sincronizar el capitulo de anime que estes viendo
+                                                    Laniakea es una plataforma creada por el equipo de animemanito para de forma sencilla, sincronizar el capitulo de anime que estes viendo
                                                     con las personas que desees. Con un chat integrado para que puedan interactuar.
                                                 </p>
                                                 <h3>¿Que necesitas para empezar?</h3>
@@ -327,7 +327,7 @@ function getThemeDownloadDomain($url)
                         </div>
                     </div>
                     <div id="commentsContainer" style="margin-top: 15px;">
-                        <div id="showComments" class="button is-rounded is-fullwidth is-dark" style="margin-bottom: 15px;">Mostrar Comentarios</div>
+                        <div id="showComments" class="button  is-fullwidth is-dark" style="margin-bottom: 15px;">Mostrar Comentarios</div>
                     </div>
                     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
                 </div>
@@ -360,7 +360,7 @@ function getThemeDownloadDomain($url)
                         }
 
                         .social-icon1 {
-                            color: #ff7d12 !important;
+                            color: #E2C205 !important;
                             grid-column: 1 / 1;
                             grid-row: 1 / 3;
                             font-size: 1.7rem;
@@ -441,7 +441,7 @@ function getThemeDownloadDomain($url)
         (function() { // DON'T EDIT BELOW THIS LINE
             var d = document,
                 s = d.createElement('script');
-            s.src = 'https://animefenix.disqus.com/embed.js';
+            s.src = 'https://animemanito.disqus.com/embed.js';
             s.setAttribute('data-timestamp', +new Date());
             (d.head || d.body).appendChild(s);
         })();

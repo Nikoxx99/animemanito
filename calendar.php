@@ -23,7 +23,7 @@ foreach ($summer as $item) {
   $day = date('d', strtotime($item['release_date']));
   $summergrouped[$month . ' ' . $day][] = $item;
 }
-$fall = DB::query("SELECT id, name, url, image_cover, release_date, status_id FROM `serie` WHERE release_season = 4 AND YEAR(release_date)= YEAR(CURDATE()) ORDER BY release_date ASC;");
+$fall = DB::query("SELECT id, name, url, image_cover, release_date, status_id FROM `serie` WHERE release_season = 4 AND status_id = 3 ORDER BY release_date ASC;");
 $fallgrouped = array();
 foreach ($fall as $item) {
   $month = date('F', strtotime($item['release_date']));
@@ -72,33 +72,14 @@ foreach ($soon as $item) {
   <meta name="trafficjunky-site-verification" content="123456" />
   <meta name="juicyads-site-verification" content="123456">
   <meta name="exoclick-site-verification" content="95b225b1f6247eb88e66b0d8dccafc6e">
-  <title>Calendario Chingon</title>
+  <title>Calendário</title>
 </head>
 <body>
   <div style="display:flex;justify-content:center;">
     <a class="navbar-item" href="<?php echo $config['urlpath']; ?>/">
-      <img src="<?php echo getThemeUrl(); ?>/images/AveFenix.png" width="212" height="98" class="logo">
+      <img src="<?php echo getThemeUrl(); ?>/images/am.png" width="212" height="98" class="logo">
     </a>
   </div>
-  <h1><span style="color:white;">Temporada de Otoño</span> 2023</h1>
-  <div class="row">
-    <?php if (empty($fallgrouped)) { ?>
-      <span><?php print('No hay animes en esta temporada aún...'); ?></span>
-    <?php } ?>
-    <?php foreach ($fallgrouped as $date => $list) {?>
-      <div class="children">
-        <div class="img-container">
-          <p><?php print($date); ?></p>
-          <img src="<?php print_r(getSerieCover($list[0]['image_cover']));?>" class="card-img-top img-calendar" alt="<?php echo $val['name']; ?>">
-        </div>
-        <ul>
-          <?php foreach ($list as $anime) { if(is_array($anime)) {?>
-            <li class="title"><a href="<?php echo $config['urlpath'] . '/' . $anime['url'];?>"><?php print_r($anime['name']);?></a></li>
-          <?php }} ?>
-        </ul>
-      </div>
-    <?php } ?>
-  </div> 
   <h1><span style="color:white;">Temporada de Invierno</span> 2024</h1>
   <div class="row">
     <?php
@@ -217,7 +198,7 @@ foreach ($soon as $item) {
       </div>
     <?php } ?>
   </div>
-  <h1><span style="color:white;">Temporada de Verano</span> 2024</h1>
+  <h1><span style="color:white;">Temporada de Verão</span> 2024</h1>
   <div class="row">
     <?php
     $animeSinFechaSummer = array(); // Array para almacenar anime sin fecha de estreno
@@ -276,6 +257,65 @@ foreach ($soon as $item) {
       </div>
     <?php } ?>
   </div>
+  <h1><span style="color:white;">Temporada de Otoño</span> 2024</h1>
+  <div class="row">
+    <?php
+    $animeSinFechaFall = array(); // Array para almacenar anime sin fecha de estreno
+
+    if (empty($fallgrouped)) { ?>
+      <span><?php print('No hay animes en esta temporada aún...'); ?></span>
+    <?php } ?>
+    <?php foreach ($fallgrouped as $date => $list) { ?>
+      <?php if (empty($list)) continue; ?>
+      <?php if (isset($list[0]['release_date'])) { ?>
+        <div class="children">
+          <div class="img-container">
+            <p><?php print($date); ?></p>
+            <img src="<?php print_r(getSerieCover($list[0]['image_cover'])); ?>"
+              class="card-img-top img-calendar" alt="<?php echo $val['name']; ?>">
+          </div>
+          <ul>
+            <?php foreach ($list as $anime) {
+              if (is_array($anime)) { ?>
+                <li class="title"><a
+                    href="<?php echo $config['urlpath'] . '/' . $anime['url']; ?>"><?php print_r($anime['name']); ?></a></li>
+            <?php } } ?>
+          </ul>
+        </div>
+      <?php } else { ?>
+        <?php
+        // Agregar elementos sin fecha de estreno al array
+        $animeSinFechaFall = array_merge($animeSinFechaFall, $list);
+        continue; // Saltar la visualización de elementos sin fecha
+        ?>
+      <?php } ?>
+    <?php } ?>
+    <?php
+    // Dividir los elementos sin fecha de estreno en grupos de 10
+    $animeSinFechaChunksFall = array_chunk($animeSinFechaFall, 10);
+
+    // Mostrar los grupos de elementos sin fecha de estreno al final
+    foreach ($animeSinFechaChunksFall as $chunkIndex => $chunk) { ?>
+      <div class="children">
+        <div class="img-container">
+          <p>Sin fecha de estreno</p>
+          <?php
+          // Utilizar el índice del chunk para obtener la imagen correspondiente
+          $imageIndex = $chunkIndex % count($chunk);
+          ?>
+          <img src="<?php print_r(getSerieCover($chunk[$imageIndex]['image_cover'])); ?>"
+            class="card-img-top img-calendar" alt="<?php echo $val['name']; ?>">
+        </div>
+        <ul>
+          <?php foreach ($chunk as $anime) { ?>
+            <li class="title">
+              <a href="<?php echo $config['urlpath'] . '/' . $anime['url']; ?>"><?php print_r($anime['name']); ?></a>
+            </li>
+          <?php } ?>
+        </ul>
+      </div>
+    <?php } ?>
+  </div>
   <h1><span style="color:white;">Próximamente</span></h1>
   <div class="row">
     <?php if (empty($soongrouped)) { ?>
@@ -305,7 +345,7 @@ foreach ($soon as $item) {
     (function() { // DON'T EDIT BELOW THIS LINE
         var d = document,
             s = d.createElement('script');
-        s.src = 'https://animefenix.disqus.com/embed.js';
+        s.src = 'https://animemanito.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
@@ -345,8 +385,8 @@ foreach ($soon as $item) {
     background-color: #181818;
     border-radius: 20px;
     padding:20px; 
-    border-top: 3px solid #ff7d12;
-    border-bottom: 3px solid #ff7d12;
+    border-top: 3px solid #E2C205;
+    border-bottom: 3px solid #E2C205;
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
   }
   @media (max-width: 1920px) {
@@ -420,7 +460,7 @@ foreach ($soon as $item) {
     border-radius: 20px;
   }
   p {
-    color: #ff7d12;
+    color: #E2C205;
     position: absolute;
     margin:0;
     bottom: 5px;
@@ -461,7 +501,7 @@ foreach ($soon as $item) {
   display: inline-block;
   font-size:1.2rem;
   font-weight: bold;
-  color: #ff7d12;
+  color: #E2C205;
   margin-left: -1em;
   width: 1em;
 }
@@ -471,7 +511,7 @@ foreach ($soon as $item) {
     font-size: 0.8rem;
   }
   h1 {
-    color: #ff7d12;
+    color: #E2C205;
     font-weight: bold;
     text-align: center;
     font-size: 4rem;
@@ -485,7 +525,7 @@ foreach ($soon as $item) {
 
   }
 .button.is-orange {
-    background-color: #ff7d12;
+    background-color: #E2C205;
     border-color: transparent;
     color: #fff;
 }

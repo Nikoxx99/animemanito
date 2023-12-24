@@ -28,8 +28,8 @@ $theme['last_series_genres'] = '';
 
 //Redirect on cloudflare trace url trash is present
 $current = $_SERVER['SERVER_NAME'];
-// if($current !== 'www.animefenix.com') {
-//   header("Location: https://www.animefenix.com"); 
+// if($current !== 'www.animemanito.com') {
+//   header("Location: https://www.animemanito.com"); 
 // }
 
 if ($theme['slider'] == true)

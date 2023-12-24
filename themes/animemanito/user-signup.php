@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="<?php echo getThemeUrl(); ?>/css/fontawesome.all.min.css">
     <style>
     .has-text-orange {
-        color: #ff7d12!important;
+        color: #E2C205!important;
     }
     .button.is-orange {
-        background-color: #ff7d12;
+        background-color: #E2C205;
         border-color: transparent;
         color: #fff;
     }

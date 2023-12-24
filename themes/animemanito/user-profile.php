@@ -86,7 +86,7 @@
 <div class="container p-0" style="min-height:100vh;">
     <div class="row">
         <aside class="col-12 col-sm-12 col-md-3 col-lg-3" style="padding-top:30px;">
-            <ul class="fenix-ul-background">
+            <ul class="manito-ul-background">
                 <li id="last-view" class="nav-link d-flex justify-content-start active" style="cursor:pointer;border-radius:5px 5px 0px 0px;">
                     <span style="padding:0.5rem;" class="has-text-orange">Últimos Capitulos Vistos</span><i style="font-size:1.5rem;margin-right:0!important;margin-left:auto;align-self: center;" class="fas fa-eye"></i>
                 </li>
@@ -100,7 +100,7 @@
                     <span style="padding:0.5rem;" class="has-text-orange">Series Pendientes por Ver</span><i style="font-size:1.5rem;margin-right:0!important;margin-left:auto;align-self: center;" class="fas fa-history"></i>
                 </li>
             </ul>
-            <section class="fenix-userinfo-container mt-3" style="border-radius:5px 5px 5px 5px;">
+            <section class="manito-userinfo-container mt-3" style="border-radius:5px 5px 5px 5px;">
                 <div class="row justify-content-center"><img id="userimg" src="<?php echo getUserAvatar($user['avatar']);?>" alt="Foto de perfil de <?php echo $session['name']; ?>" style="max-width:50%;padding:0.8rem;"></div>
                 <div class="row justify-content-center has-text-orange"><h3><?php echo $session['name'];?></h3></div>
                 <div class="row justify-content-center">
@@ -109,7 +109,7 @@
                             <div class="form-group">
                                 <input type="hidden" value="<?php echo $session['id']; ?>" name="idusuario">
                                 <input style="display:none" type="file" name="file" id="file" required />
-                                <button class="btn btn-info btn-block" style="background-color:#ff7d12!important;border: 0!important;" onclick="document.getElementById('file').click()">Cambiar Avatar</button>
+                                <button class="btn btn-info btn-block" style="background-color:#E2C205!important;border: 0!important;" onclick="document.getElementById('file').click()">Cambiar Avatar</button>
                             </div>
                             <div class="form-group">
                                 <button id="sendbtn" type="submit" class="btn btn-small btn-success btn-block submit" disabled><i class=" fa fa-cloud-upload"></i>Guardar Cambios</button>

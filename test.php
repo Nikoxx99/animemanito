@@ -77,7 +77,7 @@ foreach ($soon as $item) {
 <body>
   <div style="display:flex;justify-content:center;">
     <a class="navbar-item" href="<?php echo $config['urlpath']; ?>/">
-      <img src="<?php echo getThemeUrl(); ?>/images/AveFenix.png" width="212" height="98" class="logo">
+      <img src="<?php echo getThemeUrl(); ?>/images/am.png" width="212" height="98" class="logo">
     </a>
   </div>
   <h1><span style="color:white;">Temporada de Invierno</span> 2024</h1>
@@ -150,7 +150,7 @@ foreach ($soon as $item) {
     (function() { // DON'T EDIT BELOW THIS LINE
         var d = document,
             s = d.createElement('script');
-        s.src = 'https://animefenix.disqus.com/embed.js';
+        s.src = 'https://animemanito.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
@@ -190,8 +190,8 @@ foreach ($soon as $item) {
     background-color: #181818;
     border-radius: 20px;
     padding:20px; 
-    border-top: 3px solid #ff7d12;
-    border-bottom: 3px solid #ff7d12;
+    border-top: 3px solid #E2C205;
+    border-bottom: 3px solid #E2C205;
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
   }
   @media (max-width: 1920px) {
@@ -265,7 +265,7 @@ foreach ($soon as $item) {
     border-radius: 20px;
   }
   p {
-    color: #ff7d12;
+    color: #E2C205;
     position: absolute;
     margin:0;
     bottom: 5px;
@@ -306,7 +306,7 @@ foreach ($soon as $item) {
   display: inline-block;
   font-size:1.2rem;
   font-weight: bold;
-  color: #ff7d12;
+  color: #E2C205;
   margin-left: -1em;
   width: 1em;
 }
@@ -316,7 +316,7 @@ foreach ($soon as $item) {
     font-size: 0.8rem;
   }
   h1 {
-    color: #ff7d12;
+    color: #E2C205;
     font-weight: bold;
     text-align: center;
     font-size: 4rem;
@@ -330,7 +330,7 @@ foreach ($soon as $item) {
 
   }
 .button.is-orange {
-    background-color: #ff7d12;
+    background-color: #E2C205;
     border-color: transparent;
     color: #fff;
 }

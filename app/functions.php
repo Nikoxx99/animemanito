@@ -371,16 +371,16 @@ function send_mail($email,$token,$username){
             )
         );
         //Recipients
-        $mail->setFrom('fenix@ytlandia.es', 'AnimeFenix Papu');    // Add a recipient
+        $mail->setFrom('fenix@ytlandia.es', 'animemanito Papu');    // Add a recipient
         $mail->addAddress($email);               // Name is optional
 
         // Content
         $mail->isHTML(true);                                  // Set email format to HTML
-        $mail->Subject = 'Resetear clave en AnimeFenix';
-        $mail->Body    = 'Se ha solicitado un reseteo para tu cuenta en AnimeFenix: '.$username.'<br>Si no has sido tu has caso omiso a este mensaje.<br><br>Visita el siguiente link para resetear tu clave: https://www.animefenix.com/user/password-reset?token='.$token."<br>El link será valido solo por las siguientes 48 horas";
+        $mail->Subject = 'Resetear clave en animemanito';
+        $mail->Body    = 'Se ha solicitado un reseteo para tu cuenta en animemanito: '.$username.'<br>Si no has sido tu has caso omiso a este mensaje.<br><br>Visita el siguiente link para resetear tu clave: https://www.animemanito.com/user/password-reset?token='.$token."<br>El link será valido solo por las siguientes 48 horas";
 
         $mail->send();
     }catch (Exception $e) {
-        echo "El mensaje no pudo ser enviado. Envia el siguiente error a un administrador de AnimeFenix: {$mail->ErrorInfo}";
+        echo "El mensaje no pudo ser enviado. Envia el siguiente error a un administrador de animemanito: {$mail->ErrorInfo}";
     }
 }

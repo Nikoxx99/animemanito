@@ -7,7 +7,7 @@ RewriteRule ^user/forgot-password$ user-forgot-password.php [QSA,L]
 RewriteRule ^user/password-reset$ user-password-reset.php [QSA,L]
 
 
-RewriteRule ^zerotwo$ zerotwo.php [QSA,L]
+RewriteRule ^home1$ home1.php [QSA,L]
 RewriteRule ^animes$ series.php [QSA,L]
 RewriteRule ^calendario$ calendar.php [QSA,L]
 

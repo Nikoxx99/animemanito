@@ -138,22 +138,22 @@ startZone(); ?>
                 </div> -->
                 <!-- TERMINA ADS -->
                 <h1 class="title is-size-4 has-text-weight-semibold is-uppercase has-text-orange">
-                    <i class="fas fa-search-plus has-text-light"></i> Buscador avanzado
+                    <i class="fas fa-search-plus has-text-light"></i> AVANÇADO
                 </h1>
 
                 <form action="<?php echo $config['urlpath']; ?>/animes" method="get">
                     <div class="filters" style="margin-bottom: 10px;">
-                        <select name="genero[]" id="genre_select" multiple="multiple">
+                        <select name="Gênero[]" id="genre_select" multiple="multiple">
                             <?php
                             foreach ($data['genres'] as $item) {
                                 $selected = '';
 
-                                if (isset($_GET['genero'])) {
-                                    if (in_array($item['url'], $_GET['genero'])) {
+                                if (isset($_GET['Gênero'])) {
+                                    if (in_array($item['url'], $_GET['Gênero'])) {
                                         $selected = ' selected';
                                     }
 
-                                    if ($item['url'] == $_GET['genero']) {
+                                    if ($item['url'] == $_GET['Gênero']) {
                                         $selected = ' selected';
                                     }
                                 }
@@ -357,11 +357,11 @@ startZone(); ?>
             },
             buttonText: function(options) {
                 if (options.length === 0) {
-                    return '<b>Genero:</b> Todos';
+                    return '<b>Gênero:</b> Todos';
                 } else if (options.length > 1) {
-                    return '<b>Genero:</b> ' + options.length + ' seleccionados';
+                    return '<b>Gênero:</b> ' + options.length + ' seleccionados';
                 } else {
-                    return '<b>Genero:</b> ' + $(options[0]).text();
+                    return '<b>Gênero:</b> ' + $(options[0]).text();
                 }
             }
         });
@@ -370,11 +370,11 @@ startZone(); ?>
             buttonClass: 'button is-small is-light',
             buttonText: function(options) {
                 if (options.length === 0) {
-                    return '<b>Tipo:</b> Todos';
+                    return '<b>Categoria:</b> Todos';
                 } else if (options.length > 1) {
-                    return '<b>Tipo:</b> ' + options.length + ' seleccionados';
+                    return '<b>Categoria:</b> ' + options.length + ' seleccionados';
                 } else {
-                    return '<b>Tipo:</b> ' + $(options[0]).text();
+                    return '<b>Categoria:</b> ' + $(options[0]).text();
                 }
             }
         });
@@ -399,11 +399,11 @@ startZone(); ?>
             buttonClass: 'button is-small is-light',
             buttonText: function(options) {
                 if (options.length === 0) {
-                    return '<b>Año:</b> Todos';
+                    return '<b>Ano:</b> Todos';
                 } else if (options.length > 1) {
-                    return '<b>Año:</b> ' + options.length + ' seleccionados';
+                    return '<b>Ano:</b> ' + options.length + ' seleccionados';
                 } else {
-                    return '<b>Año:</b> ' + $(options[0]).text();
+                    return '<b>Ano:</b> ' + $(options[0]).text();
                 }
             }
         });
@@ -412,11 +412,11 @@ startZone(); ?>
             buttonClass: 'button is-small is-light',
             buttonText: function(options) {
                 if (options.length === 0) {
-                    return '<b>Orden:</b> Por Defecto';
+                    return '<b>Ordem:</b> Padrão';
                 } else if (options.length > 1) {
-                    return '<b>Orden:</b> ' + options.length + ' seleccionados';
+                    return '<b>Ordem:</b> ' + options.length + ' seleccionados';
                 } else {
-                    return '<b>Orden:</b> ' + $(options[0]).text();
+                    return '<b>Ordem:</b> ' + $(options[0]).text();
                 }
             }
         });

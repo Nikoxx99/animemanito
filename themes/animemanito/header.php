@@ -22,7 +22,7 @@
     <!-- CLICKADU -->
     <!-- <script data-cfasync="false" type="text/javascript" src="//thingrealtape.com/aas/r45d/vki/1841568/tghr.js"></script> -->
     <!-- ADMAVEN -->
-    <!-- <script src="https://animefenix.com/script.js"></script> -->
+    <!-- <script src="https://animemanito.com/script.js"></script> -->
     <!-- <script data-cfasync="false" src="//dq06u9lt5akr2.cloudfront.net/?tluqd=936016"></script> -->
     <!-- PPADS -->
     <?php /*include 'adtag2.php';*/?>
@@ -63,7 +63,7 @@
     <div class="container">
         <div class="navbar-brand">
             <a class="navbar-item" href="<?php echo $config['urlpath']; ?>/">
-                <img src="<?php echo getThemeUrl(); ?>/images/AveFenix.png" width="112" height="28" class="logo">
+                <img src="<?php echo getThemeUrl(); ?>/images/animemanito.png" width="112" height="28" class="logo">
             </a>
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
@@ -73,10 +73,10 @@
         </div>
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item" href="<?php echo $config['urlpath']; ?>/">Inicio</a>
+                <a class="navbar-item" href="<?php echo $config['urlpath']; ?>/">Home</a>
                 <a class="navbar-item" href="<?php echo $config['urlpath']; ?>/animes">Animes</a>
-                <a class="navbar-item" href="<?php echo $config['urlpath']; ?>/animes?estado[]=1">En Emisión</a>
-                <a class="navbar-item rainbow" href="<?php echo $config['urlpath']; ?>/calendario">Calendario</a>
+                <a class="navbar-item" href="<?php echo $config['urlpath']; ?>/animes?estado[]=1">Em transmissão</a>
+                <a class="navbar-item" href="<?php echo $config['urlpath']; ?>/calendario">Calendário</a>
                 <!-- <a class="navbar-item rainbow" href="https://t.me/+rcM-TGdagjtlNDlh">Telegram</a>
                 <a class="navbar-item" href="https://moelist.online">
                     <img src="<?php echo getThemeUrl(); ?>/images/moelist.jpg" alt="VBluelist">
@@ -87,17 +87,17 @@
 
                 <?php if (isset($session)) { ?>
                     <div class="navbar-item">
-                        <?php if ($session['role'] == 'admin') { ?><a class="button is-light is-rounded" style="margin-right:0.8rem;" href="<?php echo $config['adminpath']; ?>/"><strong>Panel</strong></a><?php } ?>
+                        <?php if ($session['role'] == 'admin') { ?><a class="button is-light " style="margin-right:0.8rem;" href="<?php echo $config['adminpath']; ?>/"><strong>Panel</strong></a><?php } ?>
                         <div class="dropdown" style="margin-right:0.8rem;">
                             <div class="dropdown-trigger">
-                                <button class="button is-orange is-rounded" aria-haspopup="true" aria-controls="fenix-usuario">
+                                <button class="button is-orange " aria-haspopup="true" aria-controls="manito-usuario">
                                     <span><?php echo $session['name']; ?></span>
                                     <span class="icon is-small">
                                         <i class="fas fa-angle-down" aria-hidden="true"></i>
                                     </span>
                                 </button>
                             </div>
-                            <div class="dropdown-menu" id="fenix-usuario" role="menu">
+                            <div class="dropdown-menu" id="manito-usuario" role="menu">
                                 <div class="dropdown-content" style="z-index:9999;">
                                     <a href="<?php echo $config['urlpath']; ?>/perfil/<?php echo $session['id']; ?>/" class="dropdown-item">
                                         Mi Lista
@@ -111,27 +111,27 @@
                         <form action="<?php echo $config['urlpath']; ?>/animes" method="get">
                             <div class="field has-addons">
                                 <div class="control has-icons-right is-expanded">
-                                    <input type="text" class="input is-orange is-rounded" placeholder="Busca un anime aquí..." name="q">
+                                    <input type="text" class="input is-orange " placeholder="Busca un anime aquí..." name="q">
                                 </div>
                                 <p class="control">
-                                    <button type="submit" class="button is-orange is-rounded"><i class="fas fa-search"></i></a>
+                                    <button type="submit" class="button is-orange "><i class="fas fa-search"></i></a>
                                 </p>
                             </div>
                         </form>
                     </div>
                 <?php } else { ?>
                     <div class="navbar-item">
-                        <a style="margin-right:0.8rem;" class="button is-orange is-rounded" href="<?php echo $config['urlpath']; ?>/user/signup"><strong>Registro</strong></a>
-                        <a style="margin-right:0.8rem;" class="button is-light is-rounded" href="<?php echo $config['urlpath']; ?>/user/login">Ingresar</a>
+                        <a style="margin-right:0.8rem;" class="button is-orange " href="<?php echo $config['urlpath']; ?>/user/signup"><strong>Check-in</strong></a>
+                        <a style="margin-right:0.8rem;" class="button is-light " href="<?php echo $config['urlpath']; ?>/user/login">Entrar</a>
                     </div>
                     <div class="navbar-item">
                         <form action="<?php echo $config['urlpath']; ?>/animes" method="get">
                             <div class="field has-addons">
                                 <div class="control has-icons-right is-expanded">
-                                    <input type="text" class="input is-orange is-rounded" placeholder="Busca un anime aquí..." name="q">
+                                    <input type="text" class="input is-orange " placeholder="Procure um anime..." name="q">
                                 </div>
                                 <p class="control">
-                                    <button type="submit" class="button is-orange is-rounded"><i class="fas fa-search"></i></a>
+                                    <button type="submit" class="button is-orange "><i class="fas fa-search"></i></a>
                                 </p>
                             </div>
                         </form>
@@ -178,7 +178,7 @@
     
     /* Handle */
     ::-webkit-scrollbar-thumb {
-    background: #ff7d12; 
+    background: #E2C205; 
     border-radius: 20px;
     }
 
