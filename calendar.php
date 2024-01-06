@@ -2,6 +2,14 @@
 require_once('app/dbconnection.php');
 require_once('app/config.php');
 require_once('app/functions.php');
+$airing = DB::query("SELECT id, name, url, image_cover, release_date, status_id FROM `serie` WHERE release_season = 1 AND YEAR(release_date) = 2024 ORDER BY release_date ASC;");
+$airinggrouped = array();
+foreach ($airing as $item) {
+  $month = date('F', strtotime($item['release_date']));
+  $day = date('d', strtotime($item['release_date']));
+  $airinggrouped[$month . ' ' . $day][] = $item;
+}
+
 $winter = DB::query("SELECT id, name, url, image_cover, release_date, status_id FROM `serie` WHERE release_season = 1 AND status_id = 3 ORDER BY release_date ASC;");
 $wintergrouped = array();
 foreach ($winter as $item) {
@@ -82,6 +90,25 @@ foreach ($soon as $item) {
   </div>
   <h1><span style="color:white;">Temporada de Invierno</span> 2024</h1>
   <div class="row">
+    <?php if (empty($airinggrouped)) { ?>
+      <span><?php print('No hay animes en esta temporada aún...'); ?></span>
+    <?php } ?>
+    <?php foreach ($airinggrouped as $date => $list) {?>
+      <div class="children">
+        <div class="img-container">
+          <p><?php print($date); ?></p>
+          <img src="<?php print_r(getSerieCover($list[0]['image_cover']));?>" class="card-img-top img-calendar" alt="<?php echo $val['name']; ?>">
+        </div>
+        <ul>
+          <?php foreach ($list as $anime) { if(is_array($anime)) {?>
+            <li class="title"><a href="<?php echo $config['urlpath'] . '/' . $anime['url'];?>"><?php print_r($anime['name']);?></a></li>
+          <?php }} ?>
+        </ul>
+      </div>
+    <?php } ?>
+  </div> 
+  <!-- <h1><span style="color:white;">Temporada de Invierno</span> 2024</h1>
+  <div class="row">
     <?php
     $animeSinFechaWinter = array(); // Array para almacenar anime sin fecha de estreno
 
@@ -138,7 +165,7 @@ foreach ($soon as $item) {
         </ul>
       </div>
     <?php } ?>
-  </div>
+  </div> -->
   <h1><span style="color:white;">Temporada de Primavera</span> 2024</h1>
   <div class="row">
     <?php
@@ -198,7 +225,7 @@ foreach ($soon as $item) {
       </div>
     <?php } ?>
   </div>
-  <h1><span style="color:white;">Temporada de Verão</span> 2024</h1>
+  <h1><span style="color:white;">Temporada de Verano</span> 2024</h1>
   <div class="row">
     <?php
     $animeSinFechaSummer = array(); // Array para almacenar anime sin fecha de estreno

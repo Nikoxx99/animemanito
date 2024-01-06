@@ -298,10 +298,10 @@ require_once('_header.php');
         $(modeloFinalizados).click(function(){
             $(".added_2").remove();
             var modelo = [
-                '6','17','16','22','21','2','3','4','15'
+                '17','6','16','22','21','2','3','4','15'
             ];
             var modeloNames = [
-                'YourUpload', 'TERA', 'STREAM2', 'Fireload','Burst',  'LION', 'Mp4upload', 'Senvid', 'Mega'
+                'TERA','YourUpload', 'STREAM2', 'Fireload','Burst',  'LION', 'Mp4upload', 'Senvid', 'Mega'
             ];
             var y = $("#repros tr").length + 1;
             for (i = y - 2; i <= modeloNames.length - 1; i++){

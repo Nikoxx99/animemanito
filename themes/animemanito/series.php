@@ -1,10 +1,10 @@
 <?php
 startZone(); ?>
-<title>Anime Gratis - <?php echo $config['site_name']; ?></title>
+<title>Baixar - <?php echo $config['site_name']; ?></title>
 <!-- Seo -->
 <meta content='Anime' name='Subject' />
 <meta content='<?php echo htmlspecialchars($config['site_name']); ?>' name='author' />
-<meta content='es' name='language' />
+<meta content='pt' name='language' />
 <meta content='3 days' name='Revisit-After' />
 <meta content='id' name='language' />
 <meta content='all' name='audience' />
@@ -23,12 +23,12 @@ startZone(); ?>
 <meta content='all, index, follow' name='yahoo-slurp' />
 <meta content='index, follow' name='msnbot' />
 <meta content='all' name='googlebot-image' />
-<meta name="title" content="Anime Gratis - <?php echo htmlspecialchars($config['site_name']); ?>" />
-<meta name="description" content="Ver anime gratis con buena calidad en <?php echo htmlspecialchars($config['site_name']); ?>" />
-<meta name="keywords" content="todos los animes" />
+<meta name="title" content="Animes Online do Br - <?php echo htmlspecialchars($config['site_name']); ?>" />
+<meta name="description" content="Assistir Animes Online do Br <?php echo htmlspecialchars($config['site_name']); ?>" />
+<meta name="keywords" content="Assistir, Baixar, Animes Online do Br" />
 <link rel="shortcut icon" href="<?php echo $config['urlpath']; ?>/favicon.ico" />
-<meta property="og:title" content="Anime Gratis - <?php echo htmlspecialchars($config['site_name']); ?>" />
-<meta property="og:description" content="Ver anime en <?php echo htmlspecialchars($config['site_name']); ?>" />
+<meta property="og:title" content="Assistir Animes Online do Br - <?php echo htmlspecialchars($config['site_name']); ?>" />
+<meta property="og:description" content="Assistir y Baixar Animes Online do Br <?php echo htmlspecialchars($config['site_name']); ?>" />
 <meta property="og:url" content="<?php echo $config['urlpath']; ?>/animes/" />
 <meta property="og:image" content="<?php echo getThemeUrl(); ?>/img/web.png" />
 <link rel="image_src" href="<?php echo getThemeUrl(); ?>/img/web.png" />

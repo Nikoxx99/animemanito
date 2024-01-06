@@ -17,14 +17,14 @@
 <?php if (isset($data['footer_js'])) { echo $data['footer_js']; } ?>
 
     <?php if($config['analytics'] !== '') { ?>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V3DHYJ369Q"></script>
-    <script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW9W242HCN"></script>
+        <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-V3DHYJ369Q');
-    </script>
+        gtag('config', 'G-VW9W242HCN');
+        </script>
     <?php } ?>
 
     <script>

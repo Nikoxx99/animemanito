@@ -1,10 +1,10 @@
 <?php startZone();
 date_default_timezone_set('America/Bogota');
 ?>
-<title><?php echo $data['serie']['name']; ?> Online HD</title>
+<title>Baixar <?php echo $data['serie']['name']; ?> Online HD</title>
 <!-- Seo -->
 <meta content='<?php echo htmlspecialchars($config['site_name']); ?>' name='author' />
-<meta content='es' name='language' />
+<meta content='pt' name='language' />
 <meta content='3 days' name='Revisit-After' />
 <meta content='id' name='language' />
 <meta content='all' name='audience' />

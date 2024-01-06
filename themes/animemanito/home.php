@@ -1,9 +1,9 @@
 <?php startZone(); ?>
-<title>Ver anime online - <?php echo $config['site_name']; ?></title>
+<title>Assistir Animes Online do Br - <?php echo $config['site_name']; ?></title>
 <!-- Seo -->
 <meta content='<?php echo htmlspecialchars($config['site_name']); ?>' name='author' />
-<meta content='es' http-equiv='content-language' />
-<meta content='es' name='language' />
+<meta content='pt' http-equiv='content-language' />
+<meta content='pt' name='language' />
 <meta content='all' name='audience' />
 <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
 <meta content='general' name='rating' />
@@ -19,11 +19,11 @@
 <meta content='index, follow' name='msnbot' />
 <meta content='all' name='googlebot-image' />
 <meta name="title" content="<?php echo htmlspecialchars($config['site_name'] . ' Anime Online'); ?>" />
-<meta name="description" content="Anime HD en sub espanol." />
-<meta name="keywords" content="anime de estrenos, anime online, anime sub espanol" />
+<meta name="description" content="A melhor maneira de assistir animes online hd, no br animes ficou fácil ver seu anime favorito grátis, basta acessar o vídeo e dar play." />
+<meta name="keywords" content="Assistir Animes Online do Br" />
 <link rel="shortcut icon" href="<?php echo $config['urlpath']; ?>/favicon.ico" />
 <meta property="og:title" content="<?php echo htmlspecialchars($config['site_name'] . ' Anime Online'); ?>" />
-<meta property="og:description" content="Anime HD en sub espanol." />
+<meta property="og:description" content="Assistir Animes Online do Br" />
 <meta property="og:url" content="<?php echo $config['urlpath']; ?>/" />
 <meta property="og:image" content="<?php echo getThemeUrl(); ?>/img/web.png" />
 <link rel="image_src" href="<?php echo getThemeUrl(); ?>/img/web.png" />

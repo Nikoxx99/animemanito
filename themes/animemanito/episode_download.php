@@ -12,10 +12,10 @@ function getThemeDownloadDomain($url)
 }
 ?>
 <?php startZone(); ?>
-<title>Descargar <?php echo $data['serie']['name'] . ' ' . $data['episode']['number'] . ' Sub Español - ' . $config['site_name']; ?></title>
+<title>Baixar <?php echo $data['serie']['name'] . ' ' . $data['episode']['number'] . ' legendado  br - ' . $config['site_name']; ?></title>
 <!-- Seo -->
 <meta content='<?php echo htmlspecialchars($config['site_name']); ?>' name='author' />
-<meta content='es' name='language' />
+<meta content='pt' name='language' />
 <meta content='3 days' name='Revisit-After' />
 <meta content='id' name='language' />
 <meta content='all' name='audience' />
@@ -34,17 +34,19 @@ function getThemeDownloadDomain($url)
 <meta content='all, index, follow' name='yahoo-slurp' />
 <meta content='index, follow' name='msnbot' />
 <meta content='all' name='googlebot-image' />
-<meta name="title" content="<?php echo htmlspecialchars('Descargar ' . $data['serie']['name'] . ' ' . $data['episode']['number'] . ' Online Sub Español'); ?>" />
-<meta name="description" content="<?php echo htmlspecialchars('Descargar ' . $data['serie']['name'] . ' ' . $data['episode']['number'] . ', descargar ' . $data['serie']['name'] . ' ' . $data['episode']['number'] . ' hd, watch ' . $data['serie']['name'] . ' ' . $data['episode']['number'] . ''); ?>" />
-<meta name="keywords" content="<?php echo htmlspecialchars($data['serie']['name'] . ' ' . $data['episode']['number'] . ', Descargar ' . $data['serie']['name'] . ' ' . $data['episode']['number'] . ', descargar ' . $data['serie']['name'] . ' ' . $data['episode']['number'] . ''); ?>" />
-<meta property="og:title" content="<?php echo htmlspecialchars('Descargar ' . $data['serie']['name'] . ' ' . $data['episode']['number'] . ': Japones-Subtitulado Online Sub Español'); ?>" />
-<meta property="og:description" content="<?php echo htmlspecialchars($data['serie']['name'] . ' ' . $data['episode']['number'] . ', Descargar ' . $data['serie']['name'] . ' ' . $data['episode']['number'] . ', descargar ' . $data['serie']['name'] . ' ' . $data['episode']['number'] . ' hd, watch ' . $data['serie']['name'] . ' ' . $data['episode']['number'] . ''); ?>" />
+<meta name="title" content="Baixar <?php echo htmlspecialchars('Assistir Animes Online ' . $data['serie']['name'] . ' ' . $data['episode']['number'] . ' Online'); ?>" />
+<meta name="description" content="<?php echo htmlspecialchars('Assistir Animes Online ' . $data['serie']['name'] . ' ' . $data['episode']['number'] . ', baixar ' . $data['serie']['name'] . ' ' . $data['episode']['number'] . ' hd, watch ' . $data['serie']['name'] . ' ' . $data['episode']['number'] . ''); ?>" />
+<meta name="keywords" content="<?php echo htmlspecialchars($data['serie']['name'] . ' ' . $data['episode']['number'] . ', ver ' . $data['serie']['name'] . ' ' . $data['episode']['number'] . ', baixar ' . $data['serie']['name'] . ' ' . $data['episode']['number'] . ''); ?>" />
+<meta property="og:title" content="<?php echo htmlspecialchars('Assistir Animes Online ' . $data['serie']['name'] . ' ' . $data['episode']['number'] . ': seus animes favoritos legendado ou dublado'); ?>" />
+<meta property="og:description" content="<?php echo htmlspecialchars($data['serie']['name'] . ' ' . $data['episode']['number'] . ', mirar ' . $data['serie']['name'] . ' ' . $data['episode']['number'] . ', baixar ' . $data['serie']['name'] . ' ' . $data['episode']['number'] . ' hd, watch ' . $data['serie']['name'] . ' ' . $data['episode']['number'] . ''); ?>" />
 <meta property="og:url" content="<?php echo $config['current_url']; ?>" />
 <meta content="427855911147827" property="fb:app_id">
 <meta property="og:image" content="<?php echo getEpisodeImage($data['serie']['image_screenshot'], $data['episode']['image']); ?>" />
 <meta property="og:image" content="<?php echo getSerieCover($data['serie']['image_cover']); ?>" />
 <meta property="og:site_name" content="<?php echo htmlspecialchars($config['site_name']); ?>" />
 <meta property="og:type" content="tv_show" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:id" content="<?php echo ($episode_id); ?>" />
 <!-- Alertify -->
 <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
