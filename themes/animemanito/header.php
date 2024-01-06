@@ -100,10 +100,10 @@
                             <div class="dropdown-menu" id="manito-usuario" role="menu">
                                 <div class="dropdown-content" style="z-index:9999;">
                                     <a href="<?php echo $config['urlpath']; ?>/perfil/<?php echo $session['id']; ?>/" class="dropdown-item">
-                                        Mi Lista
+                                        Minha lista
                                     </a>
                                     <a href="<?php echo $config['urlpath']; ?>/user/logout" class="dropdown-item is-danger">
-                                        Cerrar Sesion
+                                        Fechar Sessão
                                     </a>
                                 </div>
                             </div>
@@ -111,7 +111,7 @@
                         <form action="<?php echo $config['urlpath']; ?>/animes" method="get">
                             <div class="field has-addons">
                                 <div class="control has-icons-right is-expanded">
-                                    <input type="text" class="input is-orange " placeholder="Busca un anime aquí..." name="q">
+                                    <input type="text" class="input is-orange " placeholder="Procure um anime aqui..." name="q">
                                 </div>
                                 <p class="control">
                                     <button type="submit" class="button is-orange "><i class="fas fa-search"></i></a>

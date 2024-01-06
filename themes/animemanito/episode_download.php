@@ -125,7 +125,7 @@ html{
 <body>
 <div class="container" style="margin-top:2rem;">
     <h1 class="title is-size-4 has-text-centeredX has-text-weight-semibold is-uppercaseX has-text-light">
-        Descarga <?php echo $data['serie']['name']; ?> <?php echo $data['episode']['number']; ?> Sub Español
+        Baixar <?php echo $data['serie']['name']; ?> <?php echo $data['episode']['number']; ?>
     </h1>
     <section class="section">
     <?php include 'ads/galak.php';?>
@@ -148,7 +148,7 @@ html{
 
             <div class="column is-6-desktop is-8-tablet is-8-mobile">
                 <a href="<?php echo $config['urlpath'] . '/' . $data['serie']['url']; ?>" class="button  is-dark" style="font-size:0.9rem!important;display: flex;justify-content: center;">
-                    <i class="fa fa-list-alt"></i>&nbsp;Episodios
+                    <i class="fa fa-list-alt"></i>&nbsp;Episódios
                 </a>
             </div>
 
@@ -170,11 +170,11 @@ html{
                 <a href="<?php echo $config['urlpath'].'/redirect_download.php?sid='.urlencode($data['serie']['id']).'&cnumber='.$episode_number.'&dl='.$key; ?>" class="button is-fullwidth is-orange" style="margin-bottom: 1rem;" target="_blank"><i class="fas fa-cloud-download-alt"></i>&nbsp;<?php echo getThemeDownloadDomain($download); ?></a>
             <?php } ?>
         <?php } else { ?>
-            <p class="callout callout-danger lead" style="background-color: #353a3d !important;color: #fff;padding: 10px;border-radius: 2px">Necesitas estar logueado para poder descargar... </p>
+            <p class="callout callout-danger lead" style="background-color: #353a3d !important;color: #fff;padding: 10px;border-radius: 2px">Você precisa estar logado para baixar... </p>
         <?php } ?>
     </section>
     <section class="section" style="padding-top:0;">
-    <article class="message is-dark">
+   <!--  <article class="message is-dark">
         <div class="message-header">
             <p>NOTA</p>
         </div>
@@ -227,7 +227,7 @@ html{
             </a>
         </div>
         </article>
-    </section>
+    </section>-->
     <section class="section">
         <!-- ADS -->
         <!-- <div class="is-hidden-touch" style="display:grid;place-items:center">
@@ -246,7 +246,6 @@ html{
     </section>
 </div>
 </body>
-<?php include 'adtag.php' ?>
 <?php startZone(); ?>
 <?php $data['footer_js'] = endZone(); ?>
 

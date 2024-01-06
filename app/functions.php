@@ -336,14 +336,16 @@ function frans_order_servers($a, $b) {
 }
 
 function getPercentage($up_votes,$down_votes){
-    if ($down_votes === 0) {
-        return 10.00;
+    echo $up_votes;
+    if ($up_votes == 0 or $down_votes == 0) {
+        return 'Sem votos';
+    } else {
+        $ratio = $up_votes / ($up_votes + $down_votes);
+        $puntuacion = $ratio * 9 + 1;
+    
+        return round($puntuacion, 2) . '/10';
     }
 
-    $ratio = $up_votes / ($up_votes + $down_votes);
-    $puntuacion = $ratio * 9 + 1;
-
-    return round($puntuacion, 2) . '/10';
 }
 
 function getVotes($up,$down){

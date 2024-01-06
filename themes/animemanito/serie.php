@@ -126,16 +126,16 @@ date_default_timezone_set('America/Bogota');
                     </figure>
                     <br>
                     <?php if ($data['serie']['status_id'] == 1) { ?>
-                        <a href="<?php echo $config['urlpath'] . '/animes?estado[]=' . $data['serie']['status_id']; ?>" class="button is-success is-block"><i class="fa fa-play-circle"></i>Emisi&oacute;n</a>
+                        <a href="<?php echo $config['urlpath'] . '/animes?estado[]=' . $data['serie']['status_id']; ?>" class="button is-success is-block"><i class="fa fa-play-circle"></i>Em transmissão</a>
                     <?php } ?>
                     <?php if ($data['serie']['status_id'] == 2) { ?>
                         <a href="<?php echo $config['urlpath'] . '/animes?estado[]=' . $data['serie']['status_id']; ?>" class="button is-danger is-block">Finalizado</a>
                     <?php } ?>
                     <?php if ($data['serie']['status_id'] == 3) { ?>
-                        <a href="<?php echo $config['urlpath'] . '/animes?estado[]=' . $data['serie']['status_id']; ?>" class="button is-info is-block">Próximamente</a>
+                        <a href="<?php echo $config['urlpath'] . '/animes?estado[]=' . $data['serie']['status_id']; ?>" class="button is-info is-block">Breve</a>
                     <?php } ?>
                     <?php if ($data['serie']['status_id'] == 4) { ?>
-                        <a href="<?php echo $config['urlpath'] . '/animes?estado[]=' . $data['serie']['status_id']; ?>" class="button is-orange is-block">En Cuarentena</a>
+                        <a href="<?php echo $config['urlpath'] . '/animes?estado[]=' . $data['serie']['status_id']; ?>" class="button is-orange is-block">Em quarentena</a>
                     <?php } ?>
                     <?php if (isset($session['name'])) { ?>
                         <div class="columns">
@@ -210,37 +210,37 @@ date_default_timezone_set('America/Bogota');
                         </div>
                     </div>
 
-                    <h6 class="has-text-weight-semibold is-uppercase has-text-grey has-border-bottom">Sinopsis</h6>
+                    <h6 class="has-text-weight-semibold is-uppercase has-text-grey has-border-bottom">Sinopse</h6>
                     <p class="has-text-light sinopsis"><?php echo $data['serie']['synopsis']; ?></p>
 
                     <br>
 
-                    <h6 class="has-text-weight-semibold is-uppercase has-text-grey has-border-bottom">Géneros</h6>
+                    <h6 class="has-text-weight-semibold is-uppercase has-text-grey has-border-bottom">Gêneros</h6>
                     <p class="genres buttons">
                         <?php foreach ($data['serie']['genres'] as $genre) { ?>
                             <a href="<?php echo $config['urlpath'] . '/animes?genero[]=' . $genre['url']; ?>" class="button is-small is-orange is-outlined X"><?php echo $genre['name']; ?></a>
                         <?php } ?>
                     </p>
 
-                    <p class="has-text-weight-semibold is-uppercase has-text-grey has-border-bottom">Información general</p>
+                    <p class="has-text-weight-semibold is-uppercase has-text-grey has-border-bottom">Informações gerais</p>
 
                     <ul class="has-text-light">
-                        <li><span class="has-text-weight-semibold has-text-grey is-uppercase">Tipo:</span> <?php echo getSerieCategory($data['serie']['category_id']); ?></li>
+                        <li><span class="has-text-weight-semibold has-text-grey is-uppercase">Cara:</span> <?php echo getSerieCategory($data['serie']['category_id']); ?></li>
                         <li><span class="has-text-weight-semibold has-text-grey is-uppercase">Estado:</span> <?php echo getSerieStatus($data['serie']['status_id']); ?></li>
-                        <li><span class="has-text-weight-semibold has-text-grey is-uppercase">Episodios:</span> <?php echo count($data['episodes']); ?></li>
+                        <li><span class="has-text-weight-semibold has-text-grey is-uppercase">Episódios:</span> <?php echo count($data['episodes']); ?></li>
                         <li><span class="has-text-weight-semibold has-text-grey is-uppercase">Visitas:</span> <?php echo $data['serie']['visits']; ?></li>
                         <?php
                         if (!empty($data['serie']['related'])) {
                             foreach ($data['serie']['related'] as $related) {
                                 $serie['related'] = DB::query('SELECT name,url FROM serie WHERE id=%i', $related['id_serie_related']);
                                 if ($related['type'] == 1) {
-                                    $type = "Precuela";
+                                    $type = "Prequela";
                                 } else if ($related['type'] == 2) {
-                                    $type = "Secuela";
+                                    $type = "Sequela";
                                 } else if ($related['type'] == 3) {
                                     $type = "Spin-Off";
                                 } else if ($related['type'] == 4) {
-                                    $type = "Historia Paralela";
+                                    $type = "História paralela";
                                 }
                         ?>
                                 <li><span class="has-text-weight-semibold has-text-grey is-uppercase"><?php echo $type; ?>:</span> <a class="has-text-orange" href="<?php echo $config['urlpath']; ?>/<?php echo $serie['related'][0]['url']; ?>"><?php echo $serie['related'][0]['name']; ?></a></li>
@@ -251,7 +251,7 @@ date_default_timezone_set('America/Bogota');
 
                         <?php if ($data['serie']['status_id'] == 1 or $data['serie']['status_id'] == 4 && empty($data['serie']['text_next_episode'])) {?>
                             <br>
-                            <li><span class="has-text-weight-semibold has-text-orange is-uppercase">Próximo episodio:</span> <?php
+                            <li><span class="has-text-weight-semibold has-text-orange is-uppercase">Próximo episódio:</span> <?php
                                                                                                                                 setlocale(LC_TIME, array('es_ES.UTF-8','es_ES@dolar','es_ES','spanish'));
                                                                                                                                 $fechaFormatInit = $data['serie']['date_next_episode'];
                                                                                                                                 $fechaFormat = date("d/m/Y", strtotime($fechaFormatInit));
@@ -261,7 +261,7 @@ date_default_timezone_set('America/Bogota');
                                                                                                                                 echo ucfirst($fechaFormat);
                                                                                                                                 ?></li>
                         <?php } else if ($data['serie']['status_id'] == 1 or $data['serie']['status_id'] == 3 or $data['serie']['status_id'] == 4 && !empty($data['serie']['text_next_episode'])) { ?>
-                            <li><span class="has-text-weight-semibold has-text-orange is-uppercase">Próximo episodio:</span> <?php echo $data['serie']['text_next_episode']; ?>
+                            <li><span class="has-text-weight-semibold has-text-orange is-uppercase">Próximo episódio:</span> <?php echo $data['serie']['text_next_episode']; ?>
                             <?php } ?>
 
                     </ul>
@@ -284,7 +284,7 @@ date_default_timezone_set('America/Bogota');
                 <div class="column is-12">
 
                     <h1 class="title is-size-5 has-text-weight-light has-text-light">
-                        <i class="fa fa-list-ul has-text-orange"></i> Listado de episodios
+                        <i class="fa fa-list-ul has-text-orange"></i> Lista de episódios
                     </h1>
 
                     <?php if ($data['serie']['status'] == 1) { ?>
@@ -302,7 +302,7 @@ date_default_timezone_set('America/Bogota');
                             //echo '<b>Dia de estreno:</b> '.$release_day_name.'<br>';
                             $next_episode_text = getNextEpisode($release_day_name, $last_episode_date);
                             ?>
-                            <i class="fa fa-calendar-alt far has-text-orange"></i> Próximo episodio: <span class="has-text-weight-semibold"><?php echo $next_episode_text; ?></span>
+                            <i class="fa fa-calendar-alt far has-text-orange"></i> Próximo episódio: <span class="has-text-weight-semibold"><?php echo $next_episode_text; ?></span>
                         </div>
                     <?php } ?>
 
@@ -325,7 +325,7 @@ date_default_timezone_set('America/Bogota');
 
 
                     <h1 class="title is-size-5 has-text-weight-light has-text-light">
-                        <i class="fas fa-comment-dots far has-text-orange"></i> Comentarios sobre <?php echo $data['serie']['name']; ?>
+                        <i class="fas fa-comment-dots far has-text-orange"></i> Comentários sobre <?php echo $data['serie']['name']; ?>
                     </h1>
                     <div class="container">
                         <!-- ADS -->
@@ -409,7 +409,7 @@ date_default_timezone_set('America/Bogota');
                         estadoActual = "1";
                         $("#toggleFav").addClass("is-orange");
                         $("#toggleFav").removeClass("is-light");
-                        alertify.success('Se agrego a Favoritos');
+                        alertify.success('Adicionado aos Favoritos');
                     });
             } else if (estadoActual == "1") {
                 var favSend = "-1";
@@ -422,7 +422,7 @@ date_default_timezone_set('America/Bogota');
                         estadoActual = "0";
                         $("#toggleFav").removeClass("is-orange");
                         $("#toggleFav").addClass("is-light");
-                        alertify.error('Se quitó de Favoritos');
+                        alertify.error('Removido dos Favoritos');
                     });
             }
 
@@ -444,7 +444,7 @@ date_default_timezone_set('America/Bogota');
                         $("#toggleVl").removeClass("is-light");
                         $("#icon_wl").removeClass("fa-history");
                         $("#icon_wl").addClass("fa-times");
-                        alertify.success('Se agrego a tu lista pendientes.');
+                        alertify.success('Adicionado à sua lista de pendências');
                     });
             } else if (estadoActualVl == "1") {
                 var vlSend = "-1";
@@ -459,7 +459,7 @@ date_default_timezone_set('America/Bogota');
                         $("#toggleVl").addClass("is-light");
                         $("#icon_wl").removeClass("fa-times");
                         $("#icon_wl").addClass("fa-history");
-                        alertify.error('Se quitó de tu lista pendientes.');
+                        alertify.error('Ele foi removido da sua lista de tarefas');
                     });
             }
         });
@@ -494,11 +494,10 @@ date_default_timezone_set('America/Bogota');
                         id_serie: id_serie,
                     })
                     .done(function(data) {
-                        alert("Tu voto ha sido registrado.");
+                        alert("Seu voto foi registrado");
                     });
             }
         });
     </script>
-    <?php include 'adtag.php' ?>
 <?php } ?>
 <!-- Fin del controlador de Votacion -->
